@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="manzonmj_MAUIGridCalculator.MainPage"
+			 BackgroundColor="#a7adb2"
+	         Title=" My MAUI Grid Calculator">
+	<ContentPage.Resources>
+		<Style x:Key="NumberButtonStyle" TargetType="Button">
+			<Setter Property="BackgroundColor" Value="#6C3BAA" />
+			<Setter Property="TextColor" Value="#F8F8FF" />
+			<Setter Property="FontSize" Value="25" />
+			<Setter Property="HeightRequest" Value="70" />
+			<Setter Property="WidthRequest" Value="70" />
+			<Setter Property="CornerRadius" Value="35" />
+			<Setter Property="HorizontalOptions" Value="Center" />
+			<Setter Property="VerticalOptions" Value="Center" />
+		</Style>
+
+		<Style x:Key="OperationButtonStyle" TargetType="Button">
+			<Setter Property="BackgroundColor" Value="#027218" />
+			<Setter Property="TextColor" Value="#F8F8FF" />
+			<Setter Property="FontSize" Value="25" />
+			<Setter Property="HeightRequest" Value="70" />
+			<Setter Property="WidthRequest" Value="70" />
+			<Setter Property="CornerRadius" Value="35" />
+			<Setter Property="HorizontalOptions" Value="Center" />
+			<Setter Property="VerticalOptions" Value="Center" />
+		</Style>
+
+		<Style x:Key="UpperButtonStyle" TargetType="Button">
+			<Setter Property="BackgroundColor" Value="#ec8aac" />
+			<Setter Property="TextColor" Value="#1B1B1B" />
+			<Setter Property="FontSize" Value="25" />
+			<Setter Property="HeightRequest" Value="70" />
+			<Setter Property="WidthRequest" Value="70" />
+			<Setter Property="CornerRadius" Value="35" />
+			<Setter Property="HorizontalOptions" Value="Center" />
+			<Setter Property="VerticalOptions" Value="Center" />
+		</Style>
+
+	</ContentPage.Resources>
+
+	<Grid Padding="20"
+			  RowSpacing="10"
+			  ColumnSpacing="10"
+		      HorizontalOptions="Center"
+		      VerticalOptions="Center"
+		      WidthRequest="340">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<Label Grid.Row="0"
+					   Grid.ColumnSpan="4"
+					   Text="0"
+					   FontSize="40"
+					   TextColor="#F8F8FF"
+					   HorizontalTextAlignment="End"
+					   VerticalTextAlignment="Center"
+					   Padding="15" />
+
+		<Button Text="AC" Style="{StaticResource UpperButtonStyle}" Grid.Row="1" Grid.Column="0" />
+		<Button Text="+/-" Style="{StaticResource UpperButtonStyle}" Grid.Row="1" Grid.Column="1" />
+		<Button Text="%" Style="{StaticResource UpperButtonStyle}" Grid.Row="1" Grid.Column="2" />
+		<Button Text="&#247;" Style="{StaticResource OperationButtonStyle}" Grid.Row="1" Grid.Column="3" />
+
+		<Button Text="7" Style="{StaticResource NumberButtonStyle}" Grid.Row="2" Grid.Column="0" />
+		<Button Text="8" Style="{StaticResource NumberButtonStyle}" Grid.Row="2" Grid.Column="1" />
+		<Button Text="9" Style="{StaticResource NumberButtonStyle}" Grid.Row="2" Grid.Column="2" />
+		<Button Text="x" Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="3" />
+
+		<Button Text="4" Style="{StaticResource NumberButtonStyle}" Grid.Row="3" Grid.Column="0" />
+		<Button Text="5" Style="{StaticResource NumberButtonStyle}" Grid.Row="3" Grid.Column="1" />
+		<Button Text="6" Style="{StaticResource NumberButtonStyle}" Grid.Row="3" Grid.Column="2" />
+		<Button Text="-" Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="3"/>
+
+		<Button Text="1" Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="0" />
+		<Button Text="2" Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="1" />
+		<Button Text="3" Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="2" />
+		<Button Text="+" Style="{StaticResource OperationButtonStyle}" Grid.Row="4" Grid.Column="3" />
+
+		<Button Text="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan ="2" Style="{StaticResource NumberButtonStyle}" WidthRequest="150" HorizontalOptions="Start" />
+		<Button Text="." Grid.Row="5" Grid.Column="2" Style="{StaticResource NumberButtonStyle}"/>
+		<Button Text="=" Style="{StaticResource OperationButtonStyle}" Grid.Row="5" Grid.Column="3" />
+
+	</Grid>
+</ContentPage>
